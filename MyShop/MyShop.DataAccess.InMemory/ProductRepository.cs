@@ -9,13 +9,13 @@ using MyShop.Core.Models;
 
 namespace MyShop.DataAccess.InMemory
 {
-    class ProjectRepository
+    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products = new List<Product>();
 
         
-        public ProjectRepository()
+        public ProductRepository()
         {
             products = cache["products"] as List<Product>;
             if (products == null)
